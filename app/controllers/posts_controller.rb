@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :log_action, only: %i[ create ]
+  before_action :authenticate_user!, only: %i[ create new ]
 
   # GET /posts or /posts.json
   def index
