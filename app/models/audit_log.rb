@@ -1,2 +1,0 @@
-class AuditLog < ApplicationRecord
-end
