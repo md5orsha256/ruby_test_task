@@ -74,3 +74,5 @@ end
 gem 'dotenv-rails'
 
 gem 'devise'
+
+gem "audit-log"
