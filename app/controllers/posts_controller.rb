@@ -1,3 +1,6 @@
+require 'audit-log'
+
+
 class PostsController < ApplicationController
   before_action :log_action, only: %i[ create ]
   before_action :authenticate_user!, only: %i[ create new ]
@@ -31,12 +34,7 @@ class PostsController < ApplicationController
 
   private
   def log_action
-    AuditLog.new do |log|
-      log.type = :"#{params[:action]}_#{params[:controller]}"
-      log.user = post_params[:author]
-      log.payload = {:title => post_params[:title]}
-      log.save
-    end
+    audit! :"#{params[:action]}_#{params[:controller]}", payload: {:title => post_params[:title]}
   end
 
     # Only allow a list of trusted parameters through.
