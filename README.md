@@ -49,6 +49,15 @@ This implementation is based on the [Ruby on Rails (RoR)][rails] framework.
 7. Praise yourself, you are amazing!
 
 
+
+## TODO:
+   * Cover the application with tests
+   * Create seeds
+   * Dockerize
+   * Add bootstrap
+   * Update README.md
+   * Try solve this task with [Hanami](https://hanamirb.org)
+
 [ruby]: https://www.ruby-lang.org/
 [rails]: https://rubyonrails.org
 [postgres]: https://rubyonrails.org 
