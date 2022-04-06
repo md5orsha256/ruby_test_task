@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
+This is a test task in [Ruby][ruby].
 
-Things you may want to cover:
+This implementation is based on the [Ruby on Rails (RoR)][rails] framework.
 
-* Ruby version
+## System dependencies
+ * [Ruby][ruby] [3.1.1](https://www.ruby-lang.org/en/news/2022/02/18/ruby-3-1-1-released/)
+ * [Postgres][postgres]
 
-* System dependencies
 
-* Configuration
+## Installation step by step
 
-* Database creation
+1. Install [RoR][rails]
+    ```shell
+   gem install rails
+   ```
 
-* Database initialization
+2. Install project dependencies
+    ```shell
+   bundle install
+    ```
 
-* How to run the test suite
+3. [Create database](https://www.postgresql.org/docs/current/sql-createdatabase.html).
 
-* Services (job queues, cache servers, search engines, etc.)
+4. Create .env file
+    ```shell
+   cp .env.sample .env
+    ```
+   Open the [`.env`](.env) file and follow the instructions given in this file
 
-* Deployment instructions
+5. For running development server - you can run follow command:
+   ```shell
+   rails s
+   ```
 
-* ...
+6. Praise yourself, you are amazing!
+
+
+[ruby]: https://www.ruby-lang.org/
+[rails]: https://rubyonrails.org
+[postgres]: https://rubyonrails.org 
