@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :log_action, only: %i[ create ]
 
   # GET /posts or /posts.json
   def index
@@ -27,10 +27,14 @@ class PostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
+  def log_action
+    AuditLog.new do |log|
+      log.type = :"#{params[:action]}_#{params[:controller]}"
+      log.user = post_params[:author]
+      log.payload = {:title => post_params[:title]}
+      log.save
     end
+  end
 
     # Only allow a list of trusted parameters through.
     def post_params
