@@ -12,41 +12,35 @@ This implementation is based on the [Ruby on Rails (RoR)][rails] framework.
 
 ## Installation step by step
 
-1. Install [RoR][rails]
-    ```shell
-   gem install rails
-   ```
-
-2. Install project dependencies
+1. Install project dependencies
     ```shell
    bundle install
     ```
 
-3. Create .env file
+2. Create .env file
     ```shell
    cp .env.sample .env
     ```
    Open the [`.env`](.env) file and follow the instructions given in this file
 
-4. [Create database](https://www.postgresql.org/docs/current/sql-createdatabase.html).
+3. [Create database](https://www.postgresql.org/docs/current/sql-createdatabase.html).
    If you have the appropriate permissions, you can do it with [RoR][rails] tools:
     ```shell
    rails db:create
     ```
    If the database already exists, first run `rails db:drop` if you need to delete it.
 
-5. Apply migrations
+4. Apply migrations
     ```shell
    rails db:migrate
     ```
 
-
-6. For running development server - you can run follow command:
+5. For running development server - you can run follow command:
    ```shell
    rails s
    ```
 
-7. Praise yourself, you are amazing!
+6. Praise yourself, you are amazing!
 
 
 
